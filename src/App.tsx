@@ -1,0 +1,19 @@
+import Button from "./components/Button";
+
+function App() {
+  return (
+    <main>
+      <Button>Log in with Google</Button>
+      <Button size="lg" variant="success">
+        Log in with Google
+      </Button>
+      <Button size="sm" variant="warning">
+        Log in with Google
+      </Button>
+      <Button size="sm" variant="danger">
+        Log in with Google
+      </Button>
+    </main>
+  );
+}
+export default App;

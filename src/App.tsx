@@ -1,18 +1,13 @@
-import Button from "./components/Button";
+import Avatar from "./components/Avatar";
 
 function App() {
   return (
     <main>
-      <Button>Log in with Google</Button>
-      <Button size="lg" variant="success">
-        Log in with Google
-      </Button>
-      <Button size="sm" variant="warning">
-        Log in with Google
-      </Button>
-      <Button size="sm" variant="danger">
-        Log in with Google
-      </Button>
+      <Avatar />
+      <Avatar src="/darlene.jpg" alt="avatar" />
+      <Avatar colorClass="pink">AB</Avatar>
+      <Avatar colorClass="blue">CD</Avatar>
+      <Avatar colorClass="green">EF</Avatar>
     </main>
   );
 }

@@ -1,17 +1,1 @@
 @import "tailwindcss";
-
-main {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  gap: 1rem;
-}
-
-body {
-  background-color: #2f2f2f;
-  overflow-x: hidden;
-}

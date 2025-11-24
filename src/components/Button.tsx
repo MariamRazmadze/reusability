@@ -26,7 +26,7 @@ export default function Button({
   return (
     <button
       {...rest}
-      className={`${sizeClasses} ${variantClasses} rounded font-semibold ${className}`}
+      className={`${sizeClasses} ${variantClasses} rounded font-semibold cursor-pointer ${className}`}
     >
       {children}
     </button>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Theme/Header";
 import SwitchThemeButton from "./components/Theme/SwitchThemeButton";
 import DropdownComponent from "./components/Menu/DropdownComponent";
+import Star from "./components/Star";
 
 type ThemeContextType = {
   theme: string;
@@ -33,6 +34,8 @@ function App() {
         `}
       >
         <Header />
+        <Star />
+
         <SwitchThemeButton />
         <DropdownComponent />
       </div>

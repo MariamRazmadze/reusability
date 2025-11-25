@@ -15,7 +15,6 @@ export default function Menu({ children }: { children: React.ReactNode }) {
 
   function toggleMenu() {
     setOpen((prevOpen) => !prevOpen);
-    console.log(open);
   }
 
   return (

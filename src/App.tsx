@@ -34,7 +34,7 @@ function App() {
         `}
       >
         <Header />
-        <Star onChange={() => console.log("change")} />
+        <Star />
 
         <SwitchThemeButton />
         <DropdownComponent />

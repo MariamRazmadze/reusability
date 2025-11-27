@@ -8,7 +8,7 @@ type ToggleContextType = {
 
 type ToggleProps = {
   children: React.ReactNode;
-  onToggle: () => void;
+  onToggle?: () => void;
 };
 
 const ToggleContext = createContext<ToggleContextType>({
@@ -16,7 +16,7 @@ const ToggleContext = createContext<ToggleContextType>({
   toggle: () => {},
 });
 
-export default function Toggle({ children, onToggle }: ToggleProps) {
+export default function Toggle({ children, onToggle = () => {} }: ToggleProps) {
   const [on, setOn] = React.useState(false);
   const firstRender = useRef(true);
   function toggle() {

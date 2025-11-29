@@ -3,6 +3,7 @@ import Header from "./components/Theme/Header";
 import SwitchThemeButton from "./components/Theme/SwitchThemeButton";
 import DropdownComponent from "./components/Menu/DropdownComponent";
 import Star from "./components/Star";
+import Box from "./components/Box";
 
 type ThemeContextType = {
   theme: string;
@@ -35,6 +36,7 @@ function App() {
       >
         <Header />
         <Star />
+        <Box />
 
         <SwitchThemeButton />
         <DropdownComponent />

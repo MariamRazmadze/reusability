@@ -1,5 +1,16 @@
 import React from "react";
-import Toggle from "../Toggle/Toggle";
+import useToggle from "../../hooks/useToggle";
+import { createContext } from "react";
+
+type MenuContextType = {
+  open: boolean;
+  toggleOpen: () => void;
+};
+
+const MenuContext = createContext<MenuContextType>({
+  open: false,
+  toggleOpen: () => {},
+});
 
 export default function Menu({
   children,
@@ -8,11 +19,18 @@ export default function Menu({
   children: React.ReactNode;
   onOpen: () => void;
 }) {
+  const [open, toggleOpen] = useToggle({
+    initialValue: true,
+    onToggle: onOpen,
+  });
   return (
-    <Toggle onToggle={onOpen}>
+    <MenuContext.Provider value={{ open, toggleOpen }}>
+      {open}
       <div className="relative inline-block" role="menu">
         {children}
       </div>
-    </Toggle>
+    </MenuContext.Provider>
   );
 }
+
+export { MenuContext };

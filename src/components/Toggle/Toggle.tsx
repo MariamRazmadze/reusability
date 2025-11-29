@@ -1,6 +1,7 @@
 import React from "react";
 import { createContext } from "react";
 import useEffectOnUpdate from "../../hooks/useEffectOnUpdate";
+import useToggle from "../../hooks/useToggle";
 
 type ToggleContextType = {
   on: boolean;
@@ -18,11 +19,7 @@ const ToggleContext = createContext<ToggleContextType>({
 });
 
 export default function Toggle({ children, onToggle = () => {} }: ToggleProps) {
-  const [on, setOn] = React.useState(false);
-
-  function toggle() {
-    setOn((prev) => !prev);
-  }
+  const [on, toggle] = useToggle();
 
   useEffectOnUpdate({
     effectFunction: onToggle,

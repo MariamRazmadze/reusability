@@ -2,7 +2,11 @@ import Toggle from "./Toggle/index";
 
 export default function Box() {
   return (
-    <Toggle>
+    <Toggle
+      onToggle={() => {
+        console.log("toggled");
+      }}
+    >
       <Toggle.Button>
         <Toggle.display>
           {(on) => {
